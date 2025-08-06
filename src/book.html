@@ -1,0 +1,266 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Discover Flavors - ChillNet</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+        body {
+            font-family: 'Inria Serif', serif;
+            background: linear-gradient(to bottom, #0693FF, #C0E2FB);
+        }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="w-full px-6 py-4 bg-sky-200 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="/icecream.png" alt="ChillNet Logo" class="h-10 w-10 rounded-full bg-white border border-gray-300"/>
+            <span class="text-2xl font-bold">
+            <span class="text-pink-500 italic">Chill</span>
+            <span class="text-gray-800">Net</span>
+            </span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <!-- Search Bar -->
+            <div class="relative">
+            <input type="text" placeholder="Search" class="w-64 pl-4 pr-10 py-2 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+            <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+            </svg>
+            </div>
+            <a href="nearby-vendor.html" class="text-sm font-medium text-white hover:underline cursor-pointer">
+                Find nearby Vendors
+                </a>
+        <div class="bg-white rounded-lg px-4 py-2 shadow-sm flex items-center space-x-4 text-gray-600">
+        <button onclick="window.location.href='browser.html'" title="Browse Cart" class="p-1 rounded hover:bg-gray-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A1 1 0 007 17h10a1 1 0 00.95-.68L21 9M7 13l1.5 5m10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+          </svg>
+        </button>
+
+        <button onclick="window.location.href='availableshops.html'" title="Shops" class="p-1 rounded hover:bg-blue-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-6 9 6v9a9 9 0 01-18 0z" />
+          </svg>
+        </button>
+
+        <svg id="notificationBell" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-yellow-500 transition duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Notifications">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+
+        <button onclick="window.location.href='reserve.html'" title="Reserve" class="p-1 rounded hover:bg-blue-100 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 00-8 0v2M5 12h14l-1 9H6l-1-9z" />
+        </svg>
+        </button>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Customer Service">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 14h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+
+
+        <a href="customerprofile.html">
+            <img src="/icons/user.png" class="w-10 h-10 rounded-full bg-gray-200 border border-gray-400 cursor-pointer" />
+          </a>
+        </div>
+        </header>
+  <!-- Main Content -->
+  <div class="px-4 py-6">
+
+<!-- Product Card -->
+<div class="bg-white/90 backdrop-blur-sm rounded-lg p-4 mb-6 w-full max-w-7xl mx-auto px-8">
+  <div class="flex gap-10 items-start">
+    <!-- Product Images -->
+    <div class="flex-shrink-0">
+      <!-- Main Image (Compact) -->
+      <div class="w-64 h-64 bg-gray-200 rounded-lg overflow-hidden mb-4">
+        <img src="/mango.jpg" alt="Mango Ice Cream" class="w-full h-full object-cover" />
+      </div>
+      <!-- Thumbnails (Smaller) -->
+      <div class="flex gap-3">
+        <div class="w-20 h-20 bg-blue-200 rounded overflow-hidden">
+          <img src="/mango.jpg" alt="Container" class="w-full h-full object-cover" />
+        </div>
+        <div class="w-20 h-20 bg-gray-200 rounded overflow-hidden">
+          <img src="/mango.jpg" alt="Scoop" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  <!-- Product Details -->
+        <div class="flex-1">
+          <h1 class="text-2xl font-bold text-gray-800 mb-2">Mango Ice cream free cones</h1>
+          <div class="flex items-center mb-4">
+            <span class="text-sm text-gray-600 mr-2">Rating:</span>
+            <div class="flex items-center">
+              <span class="text-yellow-500">★★★★</span><span class="text-gray-300">★</span>
+              <span class="ml-1 text-sm text-gray-600">4.4</span>
+            </div>
+          </div>
+
+          <!-- Price Display -->
+          <div id="priceDisplay" class="text-3xl font-bold text-blue-500 mb-6">₱1800</div>
+
+          <!-- Quantity Selector -->
+          <div class="flex items-center mb-6">
+            <button id="decreaseBtn" class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">-</button>
+            <span id="quantity" class="mx-4 font-semibold">1</span>
+            <button id="increaseBtn" class="w-8 h-8 bg-gray-200 rounded flex items-center justify-center">+</button>
+            <span class="ml-4 text-sm text-gray-600">5 drums available</span>
+          </div>
+
+          <!-- Size Options -->
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Size</label>
+            <div class="flex gap-2">
+              <!-- Small -->
+              <label>
+                <input type="radio" name="size" value="Small" data-price="1800" class="peer hidden" checked />
+                <div class="px-4 py-2 text-sm rounded-md border border-gray-300 cursor-pointer 
+                            peer-checked:bg-orange-300 peer-checked:text-white 
+                            hover:bg-orange-200 hover:text-white transition">
+                  Small
+                </div>
+              </label>
+
+              <!-- Medium -->
+              <label>
+                <input type="radio" name="size" value="Medium" data-price="2300" class="peer hidden" />
+                <div class="px-4 py-2 text-sm rounded-md border border-gray-300 cursor-pointer 
+                            peer-checked:bg-orange-300 peer-checked:text-white 
+                            hover:bg-orange-200 hover:text-white transition">
+                  Medium
+                </div>
+              </label>
+
+              <!-- Large -->
+              <label>
+                <input type="radio" name="size" value="Large" data-price="2800" class="peer hidden" />
+                <div class="px-4 py-2 text-sm rounded-md border border-gray-300 cursor-pointer 
+                            peer-checked:bg-orange-300 peer-checked:text-white 
+                            hover:bg-orange-200 hover:text-white transition">
+                  Large
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Schedule Delivery -->
+          <div class="mb-4">
+            <label for="delivery-date" class="block text-xs font-medium text-gray-700 mb-1">
+              Schedule to Deliver
+            </label>
+            <input
+              type="date"
+              id="delivery-date"
+              name="delivery-date"
+              class="w-40 border border-gray-300 rounded px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-400"
+            />
+          </div>
+          <!-- Action Buttons -->
+            <div class="flex justify-end gap-3 mt-6">
+            <button onclick="showReserveAlert()" title="Reserve" class="text-sm font-medium text-gray-700 hover:text-blue-500 hover:underline transition">
+                Reserve
+            </button>
+
+            <!-- Styled Reserve Alert -->
+            <div id="reserveAlert" class="hidden fixed bottom-6 right-6 bg-[#D4F6FF] text-blue-900 px-6 py-3 rounded-lg shadow-lg text-sm font-semibold z-50">
+                ✅ Item added to reserve
+            </div>
+
+            <!-- Colored Book Now Button -->
+            <button onclick="window.location.href='checkout.html'" class="px-4 py-2 text-sm text-black rounded-md" style="background-color: #FFDDAE;">
+                Book now
+            </button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor Info -->
+<div class="bg-white/90 backdrop-blur-sm rounded-lg p-4 mb-6 w-full max-w-7xl mx-auto px-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-3">
+            <img src="/icons/user.png" class="w-6 h-6 text-gray-600" />
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800">Scoops and Smile Ice Scream</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-500">★★★★★</span>
+              <span class="ml-1 text-sm text-gray-600">5.0</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="window.location.href='vendorshop.html'" class="px-4 py-1 text-sm bg-orange-200 hover:bg-orange-300 rounded">View Shop</button>
+          <button onclick="window.location.href='contactshop.html'" class="px-4 py-1 text-sm bg-orange-200 hover:bg-orange-300 rounded">Contact Shop</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+<script>
+    const priceDisplay = document.getElementById('priceDisplay');
+    const quantityDisplay = document.getElementById('quantity');
+    const decreaseBtn = document.getElementById('decreaseBtn');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const sizeRadios = document.querySelectorAll('input[name="size"]');
+
+    let quantity = 1;
+    const maxStock = 5;
+
+    function getSelectedPrice() {
+      const selected = document.querySelector('input[name="size"]:checked');
+      return parseInt(selected.dataset.price);
+    }
+
+    function updatePrice() {
+      const basePrice = getSelectedPrice();
+      priceDisplay.textContent = `₱${basePrice * quantity}`;
+    }
+
+    // Update on size change
+    sizeRadios.forEach(radio => {
+      radio.addEventListener('change', updatePrice);
+    });
+
+    // Update on quantity increase
+    increaseBtn.addEventListener('click', () => {
+      if (quantity < maxStock) {
+        quantity++;
+        quantityDisplay.textContent = quantity;
+        updatePrice();
+      }
+    });
+
+    // Update on quantity decrease
+    decreaseBtn.addEventListener('click', () => {
+      if (quantity > 1) {
+        quantity--;
+        quantityDisplay.textContent = quantity;
+        updatePrice();
+      }
+    });
+
+    // Initial price setup
+    updatePrice();
+
+function showReserveAlert() {
+  const alertBox = document.getElementById('reserveAlert');
+  alertBox.classList.remove('hidden');
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    alertBox.classList.add('hidden');
+  }, 500);
+}
+
+  </script>
+</body>
+</html>

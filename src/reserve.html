@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reserved Items - ChillNet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inria Serif', serif;
+      background: linear-gradient(to bottom, #0693FF, #C0E2FB);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <header class="w-full px-6 py-4 bg-sky-200 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="/placeholder.svg?height=40&width=40" alt="ChillNet Logo" class="h-10 w-10 rounded-full bg-white border border-gray-300"/>
+      <span class="text-2xl font-bold">
+        <span class="text-pink-500 italic">Chill</span>
+        <span class="text-gray-800">Net</span>
+      </span>
+    </div>
+    <div class="flex items-center space-x-6">
+      <div class="relative">
+        <input type="text" placeholder="Search" class="w-64 pl-4 pr-10 py-2 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+        <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+        </svg>
+      </div>
+      <a href="nearby-vendor.html" class="text-sm font-medium text-white hover:underline">Find nearby Vendors</a>
+      
+      <div class="bg-white rounded-lg px-4 py-2 shadow-sm flex items-center space-x-4 text-gray-600">
+        <button onclick="window.location.href='browser.html'" title="Browse Cart" class="p-1 rounded hover:bg-gray-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A1 1 0 007 17h10a1 1 0 00.95-.68L21 9M7 13l1.5 5m10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+          </svg>
+        </button>
+
+        <button onclick="window.location.href='availableshops.html'" title="Shops" class="p-1 rounded hover:bg-blue-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-6 9 6v9a9 9 0 01-18 0z" />
+          </svg>
+        </button>
+
+        <svg id="notificationBell" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-yellow-500 transition duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Notifications">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+
+        <button onclick="window.location.href='reserve.html'" title="Reserve" class="p-1 rounded hover:bg-blue-100 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 00-8 0v2M5 12h14l-1 9H6l-1-9z" />
+        </svg>
+        </button>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Customer Service">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 14h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+
+      <a href="my-profile.html">
+        <img src="/placeholder.svg?height=40&width=40" class="w-10 h-10 rounded-full bg-gray-200 border border-gray-400 cursor-pointer" />
+      </a>
+    </div>
+  </header>
+
+  <div class="flex justify-center pt-8 pb-16">
+    <div class="bg-blue-100 bg-opacity-80 rounded-lg p-8 max-w-5xl w-full mx-4 shadow-lg">
+      <h2 class="text-xl font-bold text-gray-800 mb-6">Reserved</h2>
+
+      <div class="grid grid-cols-6 gap-4 mb-4 text-sm font-medium text-gray-700">
+        <div></div>
+        <div></div>
+        <div class="text-center">Size</div>
+        <div class="text-center">Unit Price</div>
+        <div class="text-center">Quantity</div>
+        <div class="text-center">Total Price</div>
+      </div>
+
+<div class="bg-[#D4F6FF] rounded-lg p-4 mb-4 reserved-item">
+        <div class="grid grid-cols-6 gap-4 items-center">
+          <div class="flex justify-center">
+            <input type="checkbox" checked class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" />
+          </div>
+          <div class="flex items-center space-x-3">
+            <img src="/placeholder.svg?height=60&width=60" class="w-15 h-15 rounded-lg bg-orange-200" />
+            <div>
+              <h3 class="font-medium text-gray-800">Mango Ice Cream free cones</h3>
+              <p class="text-sm text-blue-500">Shop name / Vendor Name</p>
+            </div>
+          </div>
+          <div class="text-center text-gray-800">Medium</div>
+<span class="text-gray-800 item-total">₱ 1800.00</span>
+          <div class="text-center text-gray-800">1</div>
+          <div class="flex items-center justify-center space-x-4">
+            <span class="text-gray-800">₱ 1800.00</span>
+<button class="text-red-500 hover:text-red-700 transition duration-200 delete-button">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4 mb-8">
+        <div class="bg-white bg-opacity-50 rounded-lg p-4">
+          <div class="grid grid-cols-6 gap-4 items-center">
+            <div class="flex justify-center">
+              <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" />
+            </div>
+            <div class="h-12"></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-50 rounded-lg p-4">
+          <div class="grid grid-cols-6 gap-4 items-center">
+            <div class="flex justify-center">
+              <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" />
+            </div>
+            <div class="h-12"></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+        <div class="bg-white bg-opacity-50 rounded-lg p-4">
+          <div class="grid grid-cols-6 gap-4 items-center">
+            <div class="flex justify-center">
+              <input type="checkbox" class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500" />
+            </div>
+            <div class="h-12"></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-end items-center space-x-6">
+        <div class="text-lg">
+          <span class="text-gray-700">Total: </span>
+<span id="total-amount" class="text-blue-500 font-bold">₱0.00</span>
+        </div>
+        <a href="checkout.html" class="px-8 py-3 bg-orange-200 text-gray-700 font-medium rounded-lg hover:bg-orange-300 transition duration-200">
+          Check out
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed bottom-4 right-4">
+    <div class="bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center space-x-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+      </svg>
+      <span class="text-sm font-medium">Messenger</span>
+    </div>
+  </div>
+  <script>
+  function updateTotal() {
+    let total = 0;
+    document.querySelectorAll('.reserved-item').forEach(item => {
+      const checkbox = item.querySelector('input[type="checkbox"]');
+      if (checkbox && checkbox.checked) {
+        const priceText = item.querySelector('.item-total')?.textContent?.replace(/[^\d.]/g, '');
+        const price = parseFloat(priceText) || 0;
+        total += price;
+      }
+    });
+    document.querySelector('#total-amount').textContent = '₱' + total.toFixed(2);
+  }
+
+  document.querySelectorAll('.delete-button').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const item = this.closest('.reserved-item');
+      if (item) {
+        item.remove();
+        updateTotal();
+      }
+    });
+  });
+
+  document.querySelectorAll('.reserved-item input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', updateTotal);
+  });
+
+  updateTotal();
+</script>
+
+</body>
+</html>

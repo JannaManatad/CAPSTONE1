@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChillNet Login</title>
+  <link href="./output.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inria Serif', serif;
+    }
+  </style>
+</head>
+<body class="scroll-smooth min-h-screen text-black" style="background: linear-gradient(to bottom right, #0693FF 0%, #C0E2FB 100%)">
+
+  <!-- Header -->
+  <header class="w-full bg-sky-100 flex items-center px-8 py-4">
+    <div class="flex items-center space-x-3">
+      <img
+        src="https://i.ibb.co/6bQ7QwP/chillnet-logo.png"
+        alt="ChillNet Logo"
+        class="h-10 w-10 rounded-full border border-gray-300 bg-white object-cover"
+      />
+      <span class="text-3xl font-bold">
+        <span class="text-pink-500 italic">Chill</span>
+        <span class="text-gray-700">Net</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <main class="flex items-center justify-center min-h-[80vh] px-4">
+    <div class="rounded-xl shadow-lg px-6 py-6 w-full max-w-md text-black" style="background-color: #D4F6FF">
+      <h2 class="text-4xl font-bold text-center mb-8">Welcome</h2>
+
+      <!-- Username -->
+      <label class="block text-xl font-semibold mb-2 mt-4" for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        placeholder="Enter username"
+        class="w-full mb-4 px-4 py-2 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-300 text-lg text-black"
+      />
+
+      <!-- Password -->
+      <label class="block text-xl font-semibold mb-2 mt-2" for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter password"
+        class="w-full mb-6 px-4 py-2 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-300 text-lg text-black"
+      />
+
+      <!-- Login Button -->
+      <a
+        href="browser.html"
+        class="block text-center w-1/2 mx-auto bg-[#33D0D8] hover:bg-[#2bbac1] text-white font-bold py-2 rounded shadow-md text-base transition"
+      >
+        LOGIN
+      </a>
+
+      <!-- Google Sign-In Button -->
+      <div class="text-center mt-4">
+        <button
+          class="flex items-center justify-center gap-2 bg-white border border-gray-400 rounded shadow-md px-4 py-2 text-sm hover:bg-gray-100 transition mx-auto"
+        >
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="h-5 w-5" />
+          <span>Sign in with Google</span>
+        </button>
+      </div>
+
+      <!-- Registration Link -->
+      <div class="text-center mt-6">
+        <a href="customer-registration.html" class="text-indigo-800 font-bold hover:underline transition">No Account? Register</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Payment Request - ChillNet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    body {
+        font-family: 'Inria Serif', serif;
+        background: linear-gradient(to bottom, #0693FF, #C0E2FB);
+    }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="w-full px-6 py-4 bg-sky-200 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+        <img src="/placeholder.svg?height=40&width=40" alt="ChillNet Logo" class="h-10 w-10 rounded-full bg-white border border-gray-300"/>
+        <span class="text-2xl font-bold">
+        <span class="text-pink-500 italic">Chill</span>
+        <span class="text-gray-800">Net</span>
+        </span>
+    </div>
+        <a href="my-profile.html">
+            <img src="/placeholder.svg?height=40&width=40" class="w-10 h-10 rounded-full bg-gray-200 border border-gray-400 cursor-pointer" />
+        </a>
+    </div>
+    </header>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen pt-16 pb-16">
+    <div class="bg-blue-100 bg-opacity-80 rounded-lg p-10 max-w-4xl w-full mx-4 shadow-lg">
+      <!-- Order Details Card -->
+      <div class="bg-white rounded-lg p-10 mb-6">
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Name:</span><span class="text-gray-800 text-lg">Jhon Lee</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Flavor:</span><span class="text-gray-800 text-lg">Manggo</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Size drum:</span><span class="text-gray-800 text-lg">Small</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Total:</span><span class="text-gray-800 text-lg">2***</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Contact:</span><span class="text-gray-800 text-lg">0912*******</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Address:</span><span class="text-gray-800 text-lg">bang bang, Purok pang pang</span></div>
+        <div class="flex justify-between mb-4"><span class="font-medium text-gray-700 text-lg">Date Delivery:</span><span class="text-gray-800 text-lg">12/1/2014</span></div>
+        <div class="flex justify-between"><span class="font-medium text-gray-700 text-lg">Payment:</span><span class="text-gray-800 text-lg">Online Payment</span></div>
+      </div>
+
+      <!-- Confirm Button -->
+      <div class="flex justify-end">
+        <button onclick="showModal()" class="px-8 py-3 bg-orange-200 text-gray-700 font-medium rounded-lg hover:bg-orange-300 transition duration-200">
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="confirmationModal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Thank you for your order!</h2>
+      <p class="text-gray-600 leading-relaxed">
+        We are pleased to confirm that your order has been successfully placed.
+        You will receive further updates shortly.
+      </p>
+      <button onclick="window.location.href='browser.html'" class="px-8 py-3 bg-orange-200 text-gray-700 font-medium rounded-lg hover:bg-orange-300 transition duration-200">
+         Home
+      </button>
+    </div>
+  </div>
+
+  <!-- JS for Modal -->
+  <script>
+    function showModal() {
+      document.getElementById('confirmationModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('confirmationModal').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Find Nearby Vendors - ChillNet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inria Serif', serif;
+        background: linear-gradient(to bottom, #0693FF, #C0E2FB);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+
+    <!-- Header -->
+    <!-- Header -->
+<header class="w-full px-6 py-4 bg-sky-200 flex justify-between items-center">
+  <!-- Logo -->
+  <div class="flex items-center space-x-3">
+    <img src="/icecream.png" alt="ChillNet Logo" class="h-10 w-10 rounded-full bg-white border border-gray-300"/>
+    <span class="text-2xl font-bold">
+      <span class="text-pink-500 italic">Chill</span>
+      <span class="text-gray-800">Net</span>
+    </span>
+  </div>
+
+  <!-- Navigation Icons -->
+  <div class="flex items-center space-x-6">
+    <!-- Search -->
+    <div class="relative">
+      <input type="text" placeholder="Search" class="w-64 pl-4 pr-10 py-2 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/>
+      </svg>
+    </div>
+
+    <!-- Find Nearby Vendors -->
+    <a href="location.html" class="text-sm font-medium text-white hover:underline">Find nearby Vendors</a>
+
+    <div class="bg-white rounded-lg px-4 py-2 shadow-sm flex items-center space-x-4 text-gray-600">
+        <button onclick="window.location.href='browser.html'" title="Browse Cart" class="p-1 rounded hover:bg-gray-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A1 1 0 007 17h10a1 1 0 00.95-.68L21 9M7 13l1.5 5m10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm-10 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+          </svg>
+        </button>
+
+        <button onclick="window.location.href='availableshops.html'" title="Shops" class="p-1 rounded hover:bg-blue-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9l9-6 9 6v9a9 9 0 01-18 0z" />
+          </svg>
+        </button>
+
+        <svg id="notificationBell" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-yellow-500 transition duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Notifications">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+
+        <button onclick="window.location.href='reserve.html'" title="Reserve" class="p-1 rounded hover:bg-blue-100 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 00-8 0v2M5 12h14l-1 9H6l-1-9z" />
+        </svg>
+        </button>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer hover:text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" title="Customer Service">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 14h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+
+    <a href="customerprofile.html">
+                <img src="/icons/user.png" class="w-10 h-10 rounded-full bg-gray-200 border border-gray-400 cursor-pointer" />
+                </a>
+  </div>
+</header>
+
+
+    <!-- Vendor Section -->
+    <section class="px-6 py-10 flex justify-center">
+      <div class="rounded-2xl shadow-xl flex flex-col lg:flex-row w-full max-w-6xl p-6 lg:p-10 gap-10 bg-[#C6E7FF]">
+        <!-- Vendor Info -->
+        <div class="flex-1">
+          <div class="flex items-center mb-4">
+            <img src="/icons/icecream-vendor.png" alt="Vendor" class="w-20 h-20 rounded-full border border-gray-300 bg-white object-cover mr-4"/>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-700">Scoops and Smile Ice Cream</h2>
+              <div class="flex items-center mt-1 text-gray-600 text-sm">
+                <span class="mr-1">🍦</span>
+                <span>4.5</span>
+                <span class="ml-1 text-xs text-gray-500">(55 reviews)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center text-gray-700 mb-3">
+            <svg class="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 21a2 2 0 0 1-2.828 0l-4.243-4.343a8 8 0 1 1 11.314 0z"/>
+              <circle cx="12" cy="11" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>Purok 1 Buagsong, Cordova, Cebu, Philippines</span>
+          </div>
+
+          <div class="mb-2">
+            <span class="font-semibold text-gray-800">Available Drum</span>
+            <p class="ml-2 text-sm text-gray-700">Large<br>Medium<br>Small</p>
+          </div>
+
+          <div class="mb-2">
+            <span class="font-semibold text-gray-800">Flavors</span>
+            <p class="ml-2 text-sm text-gray-700">Mango<br>Ube<br>Choco</p>
+          </div>
+
+          <div class="mb-4">
+            <span class="font-semibold text-gray-800">Shop Status</span>
+            <p class="ml-2 text-green-600 font-semibold">Open</p>
+          </div>
+
+          <div class="flex space-x-4">
+            <button onclick="window.location.href='vendorshop.html'"  class="bg-[#FFDDAE] hover:bg-orange-200 text-gray-800 font-semibold text-sm rounded px-6 py-2 shadow transition">
+              View Shop
+            </button>
+            <button onclick="window.location.href='book.html'"  class="bg-[#FFDDAE] hover:bg-orange-200 text-gray-800 font-semibold text-sm rounded px-6 py-2 shadow transition">
+              Book Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="flex-1 flex justify-center items-center">
+          <div class="bg-gray-300 rounded-2xl overflow-hidden border-8 border-gray-400 w-[420px] h-[320px]">
+            <img src="/map-placeholder.png" alt="Map" class="w-full h-full object-cover"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="notificationDropdown" class="absolute right-28 top-20 bg-white shadow-lg rounded-md w-72 hidden z-50">
+    <div class="p-4 border-b font-bold text-gray-700">Notifications</div>
+    <ul class="divide-y divide-gray-200 max-h-60 overflow-y-auto">
+      <li class="p-3 text-sm text-gray-600 flex justify-between items-center">
+        New vendor near you!
+        <button onclick="openModal('Vendor promo near your area.')" class="text-blue-500 text-xs underline">View</button>
+      </li>
+      <li class="p-3 text-sm text-gray-600 flex justify-between items-center">
+        You have a free cone reward.
+        <button onclick="openModal('Claim your free cone from Mango Delight.')" class="text-blue-500 text-xs underline">View</button>
+      </li>
+    </ul>
+  </div>
+
+  <div id="notificationModal" class="fixed inset-0 bg-black bg-opacity-40 items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+      <h2 class="text-lg font-bold mb-2">Notification Details</h2>
+      <p id="modalMessage" class="text-gray-700 text-sm"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  </body>
+</html>
